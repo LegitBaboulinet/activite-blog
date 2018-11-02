@@ -1,0 +1,15 @@
+<li [ngClass]="{ 'list-group-item': true,
+                  'list-group-item-success': post.likeIts > post.dontLikeIts,
+                  'list-group-item-danger': post.likeIts < post.dontLikeIts }">
+    <div class="row">
+        <div class="col-10">
+            <h2>{{ post.title }}</h2>
+        </div>
+        <div class="col-2">
+            <p>{{ post.date | date }}</p>
+        </div>
+    </div>
+    <p>{{ post.content }}</p>
+    <button class="btn btn-success" (click)="onLikeIt()">Like it</button>
+    <button class="btn btn-danger ml-1" (click)="onDontLikeIt()">Don't like it</button>
+</li>
