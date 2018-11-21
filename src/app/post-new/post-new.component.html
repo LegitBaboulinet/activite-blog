@@ -1,0 +1,16 @@
+<form class="form" [formGroup]="postForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Titre du post</label>
+    <input type="text" class="form-control" placeholder="Mon super post" formControlName="title" required />
+  </div>
+  <div class="form-group">
+    <label>Contenu du post</label>
+    <textarea class="form-control" placeholder="Ceci est un post génial !" formControlName="content" required></textarea>
+  </div>
+  <div class="form-group text-right">
+    <button type="submit" class="btn btn-primary">
+      <i class="fas fa-check"></i>
+      Ajouter le post
+    </button>
+  </div>
+</form>

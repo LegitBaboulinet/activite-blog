@@ -10,6 +10,16 @@
         </div>
     </div>
     <p>{{ post.content }}</p>
-    <button class="btn btn-success" (click)="onLikeIt()">Like it</button>
-    <button class="btn btn-danger ml-1" (click)="onDontLikeIt()">Don't like it</button>
+    <button class="btn btn-success" (click)="onLikeIt()">
+            <i class="fas fa-thumbs-up"></i>
+            Like it
+        </button>
+    <button class="btn btn-danger ml-1" (click)="onDontLikeIt()">
+            <i class="fas fa-thumbs-down"></i>
+        Don't like it
+    </button>
+    <button class="btn btn-danger ml-5" (click)="onDelete()">
+        <i class="fas fa-trash-alt"></i>
+        Supprimer
+    </button>
 </li>

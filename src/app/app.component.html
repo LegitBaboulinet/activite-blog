@@ -1,6 +1,21 @@
-<div class="container">
-    <h1>Posts</h1>
-    <ul class="list-group" *ngFor="let post of posts">
-        <app-post-list-item [post]="post"></app-post-list-item>
-    </ul>
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li [ngClass]="{ 'nav-item': true, 'active': router.url === '/posts' || router.url === '/' }">
+                <a class="nav-link" routerLink="posts" href="">
+                    <i class="fas fa-file"></i>
+                    Posts
+                </a>
+            </li>
+            <li [ngClass]="{ 'nav-item': true, 'active': router.url === '/new' }">
+                <a class="nav-link" routerLink="new" href="">
+                    <i class="fas fa-plus"></i>
+                    Créer
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container mt-4">
+    <router-outlet></router-outlet>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  posts = [ { title: 'Mon premier post', content: 'Ceci est un post', date: new Date(), likeIts: 11, dontLikeIts: 10 },
-      { title: 'Mon second post', content: 'Ceci est un post', date: new Date(), likeIts: 10, dontLikeIts: 11 },
-      { title: 'Encore un post', content: 'Ceci est un post', date: new Date(), likeIts: 10, dontLikeIts: 10 } ]
+
+  constructor(private router: Router) {}
 }
